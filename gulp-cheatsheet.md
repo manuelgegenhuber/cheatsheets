@@ -1,3 +1,6 @@
+<a href="https://github.com/manuelgegenhuber/gulp-default">Quickstart</a>
+<br>
+
 <h1>Installation</h1>
 
 <pre>npm install gulp-cli -g</pre>
