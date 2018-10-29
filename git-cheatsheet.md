@@ -551,6 +551,28 @@ references locally.
 <br>
 <br>
 
+<pre>git pull --rebase</pre>
+Git pull with rebase
+rebase -> updates local branch from github and sets
+branch commits on top of updates from github.
+
+before:
+
+commit on github & commit locally (can be resolved by merge or rebase)
+
+after:
+
+comit locally (on top)
+
+commit on github
+
+changes are nore locally but github is still behind
+the local commit.
+
+<a href="https://git-scm.com/book/de/v1/Git-Branching-Rebasing">more detailed information</a>
+<br>
+<br>
+
 <h1>SSH Authentication</h1>
 
 <h2>Generate SSH-Key (mac)</h2>
