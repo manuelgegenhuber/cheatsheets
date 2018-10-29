@@ -338,6 +338,12 @@ asterix -> you're currently on that branch.
 <br>
 <br>
 
+<pre>git branch -d {branch name}</pre>
+Deletes specified branch.
+
+<br>
+<br>
+
 <pre>git checkout <branch name></pre>
 To switch to a specified branch.
 
@@ -459,7 +465,11 @@ Clears working and staging area.
 
 <pre>git remote add origin <Repo url></pre>
 handles the remote connection with the Repo in Github.
+origin -> name
 
+Can be usefule to add another remote besides origin if you forked
+a repository on github.
+<code>git remote add {new remote name} {repo-link you forked from}</code>
 <br>
 <br>
 
