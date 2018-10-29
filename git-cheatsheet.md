@@ -223,6 +223,14 @@ Creates tag.
 <br>
 <br>
 
+<pre>git tag <tag name> <branch name></pre>
+Default -> last commit (HEAD)
+Creates tag on the last commit on
+the specified tag.
+
+<br>
+<br>
+
 <pre>git tag -d <tag name></pre>
 Deletes specified tag
 
@@ -235,17 +243,37 @@ Shows tags
 <br>
 <br>
 
-<pre>git tag -a <tag name> -m "<tag msg>"</pre>
+<pre>git tag -a <tag name> -m "<tag msg>" <commit number></pre>
 Creates annotated tag.
 
 
 <br>
 <br>
 
+<pre>git tag -f <tag name> <new commit number (optional - default HEAD)></pre>
+Changes commit assoicated to the tag.
+
+to update github:
+<code>git push --force origin unstable</code>
+<br>
+<br>
+
 <pre>git show <annotated tag name></pre>
 Shows commit with annotated tag.
-(Milestones)
 
+<br>
+<br>
+
+<pre>git push origin <tag name></pre>
+Pushes specified tag to github.
+
+(<code>git push origin :<tag name></code> Deletes remote connection if deleted locally -> notice semicolon!)
+
+<br>
+<br>
+
+<pre>git push --tags</pre>
+Pushes all tags to github.
 <br>
 <br>
 
@@ -489,7 +517,7 @@ master -> branch
 <br>
 <br>
 
-<pre>git push origin:<branch name></pre>
+<pre>git push origin :<branch name></pre>
 If you deleted a branch locally -> updates Github.
 Start with the branch-name right after the semicolon. (No space)
 
@@ -545,8 +573,10 @@ updates local information based on what's changed on Github.
 <pre>git fetch -p</pre>
 updates local information based on what's changed on Github.
 (non-destructive)
--p -> (prune option) It's going to look for any dead branches and remove those
-references locally.
+-p -> (prune option) fetches all current
+references
+(i.e. It's going to look for any dead branches and remove those
+references locally.)
 
 <br>
 <br>
