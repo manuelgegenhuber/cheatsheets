@@ -160,6 +160,14 @@ Commits a file from the working area directly to the repo.
 <br>
 <br>
 
+<pre>git commit -am "{message} , close {issue Nr.}"</pre>
+Close Issue via Commit.
+By the next <code>git push<code> the changes will be updated
+on Github.
+
+<br>
+<br>
+
 <pre>git mv <old_filename> <new_filename></pre>
 Renames a file and also keeps track about it. (need commit afterwards)
 
