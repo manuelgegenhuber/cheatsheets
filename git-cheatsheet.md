@@ -187,8 +187,8 @@ gets the last version in the repo of all files in the working area (removes chan
 <br>
 <br>
 
-<pre>exclude files from git</pre>
-Create .gitignore file. (mate .gitignore)
+<pre>touch .gitignore</pre>
+Create .gitignore file.
 Each line represents 1 expression
 (i.e. *.log -> excludes all files that end with '.log')
 
