@@ -20,7 +20,8 @@ Sets textmate as default git editor
 
 <pre>git config core.editor "code -w"</pre>
 sets vscode as default git editor.
-add code to shell - https://code.visualstudio.com/docs/setup/mac
+
+<a href="https://code.visualstudio.com/docs/setup/mac">add code to shell</a>
 
 <br>
 <br>
@@ -49,7 +50,7 @@ git config --global difftool.p4merge.path "/Applications/p4merge.app/Contents/Ma
 git config --global difftool.prompt false
 </pre>
 Configure P4Merge as Diff tool
-(Download: https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge)
+(<a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">Download</a>)
 
 <br>
 <br>
@@ -60,7 +61,7 @@ git config --global mergetool.p4merge.path "/Applications/p4merge.app/Contents/M
 git config --global mergetool.prompt false
 </pre>
 Configure P4Merge as Merge tool
-(Download: https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge)
+(<a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">Download</a>)
 
 <br>
 <br>
@@ -104,7 +105,7 @@ shows last (HEAD) commit.
 <br>
 <br>
 
-<pre>git add <file></pre>
+<pre>git add {file}</pre>
 takes file from working area and places it on stagin area.
 
 <br>
@@ -116,13 +117,13 @@ Adds all files from the working area to the staging area.
 <br>
 <br>
 
-<pre>git rm --cached <file></pre>
+<pre>git rm --cached {file}</pre>
 Removes file from repo and staging and sets it as untracked. (need commit afterwards)
 
 <br>
 <br>
 
-<pre>git reset HEAD <file></pre>
+<pre>git reset HEAD {file}</pre>
 Removes file from staging area and puts it to the working area.
 HEAD -> last commit
 
@@ -136,13 +137,13 @@ HEAD -> last commit
 <br>
 <br>
 
-<pre>git commit <file></pre>
+<pre>git commit {file}</pre>
 Commits selected file to the repo. (Opens file for message)
 
 <br>
 <br>
 
-<pre>git commit -m "<message>"</pre>
+<pre>git commit -m "{message}"</pre>
 A little bit faster to put q file to the repo.
 
 <br>
@@ -154,7 +155,7 @@ Commits a file from the working area directly to the repo. (Opens file for messa
 <br>
 <br>
 
-<pre>git commit -am "<message>"</pre>
+<pre>git commit -am "{message}"</pre>
 Commits a file from the working area directly to the repo.
 
 <br>
@@ -162,19 +163,19 @@ Commits a file from the working area directly to the repo.
 
 <pre>git commit -am "{message} , close {issue Nr.}"</pre>
 Close Issue via Commit.
-By the next <code>git push<code> the changes will be updated
+By the next <code>git push</code> the changes will be updated
 on Github.
 
 <br>
 <br>
 
-<pre>git mv <old_filename> <new_filename></pre>
+<pre>git mv {old_filename} {new_filename}</pre>
 Renames a file and also keeps track about it. (need commit afterwards)
 
 <br>
 <br>
 
-<pre>git checkout <file></pre>
+<pre>git checkout {file}</pre>
 if changes are in the working area -> gets the last version in the repo (gets "original")
 
 <br>
@@ -213,7 +214,7 @@ All file modification get to the staging area.
 
 <h1>Alias</h1>
 
-<pre>git config --global alias.<alias name> "<alias command>"</pre>
+<pre>git config --global alias.{alias name} "{alias command}"</pre>
 add an alias to git (can be found in git config --global --list)
 (i.e. git config --global alias.history "log --oneline --graph --decorate --all" -> like log but more compact)
 
@@ -224,14 +225,14 @@ add an alias to git (can be found in git config --global --list)
 
 <h1>Advanced</h1>
 
-<pre>git tag <tag name></pre>
+<pre>git tag {tag name}</pre>
 Default -> last commit (HEAD)
 Creates tag.
 
 <br>
 <br>
 
-<pre>git tag <tag name> <branch name></pre>
+<pre>git tag {tag name} {branch name}</pre>
 Default -> last commit (HEAD)
 Creates tag on the last commit on
 the specified tag.
@@ -239,7 +240,7 @@ the specified tag.
 <br>
 <br>
 
-<pre>git tag -d <tag name></pre>
+<pre>git tag -d {tag name}</pre>
 Deletes specified tag
 
 <br>
@@ -251,14 +252,14 @@ Shows tags
 <br>
 <br>
 
-<pre>git tag -a <tag name> -m "<tag msg>" <commit number></pre>
+<pre>git tag -a {tag name} -m "{tag msg}" {commit number}</pre>
 Creates annotated tag.
 
 
 <br>
 <br>
 
-<pre>git tag -f <tag name> <new commit number (optional - default HEAD)></pre>
+<pre>git tag -f {tag name} {new commit number (optional - default HEAD)}</pre>
 Changes commit assoicated to the tag.
 
 to update github:
@@ -266,16 +267,16 @@ to update github:
 <br>
 <br>
 
-<pre>git show <annotated tag name></pre>
+<pre>git show {annotated tag name}</pre>
 Shows commit with annotated tag.
 
 <br>
 <br>
 
-<pre>git push origin <tag name></pre>
+<pre>git push origin {tag name}</pre>
 Pushes specified tag to github.
 
-(<code>git push origin :<tag name></code> Deletes remote connection if deleted locally -> notice semicolon!)
+(<code>git push origin :{tag name}</code> Deletes remote connection if deleted locally -> notice semicolon!)
 
 <br>
 <br>
@@ -285,14 +286,14 @@ Pushes all tags to github.
 <br>
 <br>
 
-<pre>git diff #<commit number> HEAD</pre>
+<pre>git diff {commit number} HEAD</pre>
 Compares the HEAD commit with the specified (commit number) commit.
 HEAD -> last commit
 
 <br>
 <br>
 
-<pre>git difftool <commit number> HEAD</pre>
+<pre>git difftool {commit number} HEAD</pre>
 Compares the HEAD commit with the specified (commit mnumber) commit.
 via the specified git.difftool (i.e. P4Merge)
 cmd + q -> to quit P4Merge and return to the terminal.
@@ -317,13 +318,13 @@ HEAD -> last commit
 <br>
 <br>
 
-<pre>git diff <branch name> master</pre>
+<pre>git diff {branch name} master</pre>
 Compares last commits on the specified branches.
 
 <br>
 <br>
 
-<pre>git difftool <branch name> master</pre>
+<pre>git difftool {branch name} master</pre>
 Compares last commits on the specified branches.
 via the specified git.difftool (i.e. P4Merge)
 cmd + q -> to quit P4Merge and return to the terminal.
@@ -352,20 +353,20 @@ Deletes specified branch.
 <br>
 <br>
 
-<pre>git checkout <branch name></pre>
+<pre>git checkout {branch name}</pre>
 To switch to a specified branch.
 
 <br>
 <br>
 
-<pre>git checkout -b <branch name></pre>
+<pre>git checkout -b {branch name}</pre>
 To create a new branch &
 switch to that specified branch.
 
 <br>
 <br>
 
-<pre>git merge <branch name> </pre>
+<pre>git merge {branch name} </pre>
 Merges the commits into the current branch.
 
 Switch to master (to merge with master):
@@ -397,7 +398,7 @@ Manual
 <br>
 <br>
 
-<pre>cat <file></pre>
+<pre>cat {file}</pre>
 If you have a conflict
 <code>Auto merging CONFLICT</code>
 
@@ -443,7 +444,7 @@ loads last stash.
 <br>
 <br>
 
-<pre>git reset #<commit number> --soft</pre>
+<pre>git reset {commit number} --soft</pre>
 Resets current HEAD commit to specified commit.
 
 -> working and staging area don't get cleaned.
@@ -451,7 +452,7 @@ Resets current HEAD commit to specified commit.
 <br>
 <br>
 
-<pre>git reset #<commit number> --mixed</pre>
+<pre>git reset {commit number} --mixed</pre>
 --mixed => default
 Sets HEAD commit to sppecified commit.
 Unstages all changes since that specified commit. (clears staging area)
@@ -459,7 +460,7 @@ Unstages all changes since that specified commit. (clears staging area)
 <br>
 <br>
 
-<pre>git reset #<commit number> --hard</pre>
+<pre>git reset {commit number} --hard</pre>
 Sets HEAD commit to sppecified commit.
 Clears working and staging area.
 (Most destructive reset)
@@ -471,7 +472,7 @@ Clears working and staging area.
 
 <h1>Github (Bitbucket, Gitlab etc)</h1>
 
-<pre>git remote add origin <Repo url></pre>
+<pre>git remote add origin {Repo url}</pre>
 handles the remote connection with the Repo in Github.
 origin -> name
 
@@ -495,7 +496,7 @@ More detailed than <code>git remote -v</code>.
 <br>
 <br>
 
-<pre>git remote set-url origin<repository url></pre>
+<pre>git remote set-url origin {repository url}</pre>
 To change the Remote-Url.
 (i.e. The Name of the Repo changed on Github)
 
@@ -535,14 +536,14 @@ master -> branch
 <br>
 <br>
 
-<pre>git push origin :<branch name></pre>
+<pre>git push origin :{branch name}</pre>
 If you deleted a branch locally -> updates Github.
 Start with the branch-name right after the semicolon. (No space)
 
 <br>
 <br>
 
-<pre>git clone <git url> <folder name (optional)></pre>
+<pre>git clone {git url} {folder name (optional)}</pre>
 Copy's a git repository to your local machine.
 (i.e. You created a Repo on Github)
 
