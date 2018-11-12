@@ -589,6 +589,13 @@ updates local information based on what's changed on Github.
 <br>
 <br>
 
+<pre>git fetch --all</pre>
+updates local information based on all remote Connections.
+(non-destructive)
+
+<br>
+<br>
+
 <pre>git fetch -p</pre>
 updates local information based on what's changed on Github.
 (non-destructive)
