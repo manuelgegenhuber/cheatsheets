@@ -64,6 +64,15 @@ localIdentName: '[name]__[local]__[hash:base64:5]'
           },
 </pre>
 
+<h3>Adding prop-types to a react project for type-validation</h3>
+
+Installation:
+<pre>npm install --save-dev prop-types</pre>
+
+Import:
+<pre>import PropTypes from 'prop-types';</pre>
+
+restart server! <a href="https://reactjs.org/docs/typechecking-with-proptypes.html">More information</a>
 
 <br>
 <br>
