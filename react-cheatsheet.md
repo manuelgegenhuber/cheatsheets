@@ -10,6 +10,8 @@ Installs create-react-app globally.
 <br>
 
 <pre>create-react-app {foldername OR "." - for current folder}</pre>
+or
+<pre>npm init react-app {foldername OR "." - for current folder}</pre>
 Installs a basic react app into the specified folder.
 
 <br>
