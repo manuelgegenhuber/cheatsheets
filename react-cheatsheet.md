@@ -76,3 +76,13 @@ restart server! <a href="https://reactjs.org/docs/typechecking-with-proptypes.ht
 
 <br>
 <br>
+
+<h3>adding Typescript</h3>
+
+<pre>npm install --save typescript @types/node @types/react @types/react-dom @types/jest</pre>
+<ul>
+ <li> Rename any file to .tsx (i.e. App.js -> App.tsx)</li>
+ <li> Also restart your server!</li>
+</ul>
+
+<a href="https://facebook.github.io/create-react-app/docs/adding-typescript">More information</a>
