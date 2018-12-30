@@ -83,6 +83,7 @@ restart server! <a href="https://reactjs.org/docs/typechecking-with-proptypes.ht
 <ul>
  <li> Rename any file to .tsx (i.e. App.js -> App.tsx)</li>
  <li> Also restart your server!</li>
+ <li>Issues using Lib-Component (i.e. react-admin)? Add to tsconfig.json <pre>"noImplicitAny": false</pre> (find solution!)</li>
 </ul>
 
 <a href="https://facebook.github.io/create-react-app/docs/adding-typescript">More information</a>
